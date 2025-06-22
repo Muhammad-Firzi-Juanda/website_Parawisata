@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Museun Tanjungpinang</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">..</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+
+    
+    <!-- Navbar dengan sticky-top -->
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 sticky-top" style="background-color: transparent; transition: all 0.3s ease;">
+        <a href="index.html" class="navbar-brand p-0">
+            <h1 class="m-0" style="color: rgb(255, 255, 255);">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="img/logo3.jpg" alt="" 
+                            style="filter: brightness(2); width: 400px; height: auto;">
+                    </div>
+                <!-- <i class="fa fa-map-marker-alt me-3" style="color: #8B4513;"></i>Museum-->
+            </h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link" style="color: rgb(255, 255, 255);">Halaman</a>
+                <a href="about.html" class="nav-item nav-link" style="color: white;">Tentang</a>
+                <a href="service.html" class="nav-item nav-link" style="color: white;">Pelayanan</a>
+                <a href="koleksi.html" class="nav-item nav-link" style="color: white;">Koleksi</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: white;">Pages</a>
+                    <div class="dropdown-menu m-0" style="background-color: #111; border: 1px solid #333;">
+                       <a href="team.html" class="dropdown-item" style="color: #ddd;">Koleksi</a>
+                        <a href="tanggapan.html" class="dropdown-item" style="color: #ddd;">Tanggapan</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link" style="color: white;">Kontak</a>
+            </div>
+            <a href="https://wa.me/6285668322854" class="btn rounded-pill py-2 px-4 ms-lg-3" style="background-color: #ceb901; color: white; border: 1px solid #ffffff;">Hubungi</a>
+        </div>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <div id="heroSection" class="container-fluid py-5 mb-5 hero-header4" style="background: linear-gradient rgba(0, 0, 0, 0.7), url('img/hero-bg.jpg') center center no-repeat; background-size: cover;">
+        <div class="container py-5">
+            <div class="row justify-content-center py-5">
+                <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Pelayanan</h1>
+                    <a href="contact.html" class="nav-item nav-link" style="color: rgba(255, 255, 255, 0);"></a>
+                    <p class="fs-4 text-white mb-4 animated slideInDown" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);"></p>
+                    <div class="position-relative w-75 mx-auto animated slideInDown">
+                        <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Cari" style="background-color: rgba(255, 255, 255, 0.2); color: white;">
+                        <button type="button" class="btn rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top: 7px; background-color: #b4a202; color: white;">Cari</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Reset default navbar styles */
+        #mainNavbar {
+            transition: all 0.3s ease-in-out;
+            z-index: 1030;
+        }
+    
+        /* ===== DESKTOP VERSION (min-width: 992px) ===== */
+        @media (min-width: 992px) {
+            /* Transparent style for home page */
+            body.home-page #mainNavbar:not(.scrolled) {
+                background-color: transparent !important;
+                box-shadow: none !important;
+            }
+            
+            body.home-page #mainNavbar:not(.scrolled) .navbar-brand h1,
+            body.home-page #mainNavbar:not(.scrolled) .nav-link {
+                color: white !important;
+            }
+            
+            body.home-page #mainNavbar:not(.scrolled) .btn-primary {
+                background-color: rgba(255, 255, 255, 0.2) !important;
+                border-color: white !important;
+                color: white !important;
+            }
+            
+            /* Scrolled state */
+            body.home-page #mainNavbar.scrolled {
+                background-color: rgb(34, 34, 34) !important;
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+            }
+            
+            /* Other pages style */
+            body:not(.home-page) #mainNavbar {
+                background-color: white !important;
+                box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.1) !important;
+            }
+        }
+    
+        /* ===== MOBILE VERSION (max-width: 991.98px) ===== */
+        @media (max-width: 991.98px) {
+            #mainNavbar {
+                background-color: rgb(34, 34, 34) !important;
+                box-shadow: 0 0.5rem 1rem rgba(253, 253, 253, 0.1) !important;
+            }
+            
+            /* Mobile menu styles remain the same as previous solution */
+            #mainNavbar .navbar-brand h1,
+            #mainNavbar .nav-link,
+            #mainNavbar .dropdown-item {
+                color: #ffffff !important;
+            }
+            
+            #mainNavbar .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+            }
+        }
+    
+        /* Common styles */
+        .hero-header4 {
+            margin-top: 0;
+            padding-top: 8rem !important;
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.getElementById('mainNavbar');
+            const isHomePage = window.location.pathname.endsWith('service.html') || 
+                              window.location.pathname.endsWith('/');
+            
+            // Set body class
+            document.body.classList.add(isHomePage ? 'home-page' : 'other-page');
+            
+            // Handle scroll effect only on home page
+            if (isHomePage) {
+                function handleScroll() {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                }
+                
+                // Run once on load
+                handleScroll();
+                
+                // Add scroll listener
+                window.addEventListener('scroll', handleScroll);
+            }
+        });
+    </script>
+
+    <!-- About Start -->
+    <div id="intro" class="basic-1" style="background-color: #000000; color: #fff;">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-0 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 0px;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5" style="background-color: #000;">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title text-center px-3" style="color: #ceb901;">Layanan</h6>
+                <h1 class="mb-5" style="color: #fff;">Layanan Kami</h1>
+            </div>
+                    <div class="row g-4 justify-content-center">
+                        <!-- Service Item 1 -->
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="service-item rounded pt-3" style="background-color: #111; border: 1px solid #333;">
+                                <div class="p-4">
+                                    <i class="fa fa-3x fa-user mb-4" style="color: #ceb901;"></i>
+                                    <h5 style="color: #fff;">Pemandu</h5>
+                                    <p style="color: #ccc;">Kami Mnyediakan Pemandu Untuk Memperkenalkan Koleksi Yang Ada Pada Museum Ini</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Service Item 2 -->
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="service-item rounded pt-3" style="background-color: #111; border: 1px solid #333;">
+                                <div class="p-4">
+                                    <i class="fa fa-3x fa-cog mb-4" style="color: #ceb901;"></i>
+                                    <h5 style="color: #fff;">Manajemen Acara</h5>
+                                    <p style="color: #ccc;">Kami Menerima Kegiatan Acara Pada Museum Kami Untuk Memperkenalkan Museum Kami</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>            
+                <!-- Repeat for other service items as needed -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5" style="background-color: #202020;">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title text-center px-3" style="color: #b4a202;">Pemandu Tur</h6>
+                <h1 class="mb-5" style="color: #fff;">Perkenalkan Pemandu Kami</h1>
+            </div>
+            <div class="row g-4">
+                <!-- Guide 1 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item" style="background-color: #111; border: 1px solid #333;">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/team-1.jpg" alt="" style="filter: brightness(0.9);">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
+                            <a class="btn btn-square mx-1" href="" style="background-color: #b4a202; color: white;"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href="" style="background-color: #b4a202; color: white;"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href="" style="background-color: #b4a202; color: white;"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0" style="color: #fff;">Akbar Rahmat Arifin</h5>
+                            <small style="color: #b4a202;">Pemandu wisata</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guide 2 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item" style="background-color: #111; border: 1px solid #333;">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/team-2.jpg" alt="" style="filter: brightness(0.9);">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
+                            <a class="btn btn-square mx-1" href="" style="background-color: #b4a202; color: white;"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href="" style="background-color: #b4a202; color: white;"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href="" style="background-color: #b4a202; color: white;"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0" style="color: #fff;">Ragil novant</h5>
+                            <small style="color: #b4a202;">Ahli sejarah</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guide 3 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item" style="background-color: #111; border: 1px solid #333;">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/team-3.jpg" alt="" style="filter: brightness(0.9);">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
+                            <a class="btn btn-square mx-1" href="" style="background-color: #b4a202; color: white;"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href="" style="background-color: #b4a202; color: white;"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href="" style="background-color: #b4a202; color: white;"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0" style="color: #fff;">Fahmi Zikri</h5>
+                            <small style="color: #b4a202;">Pemandu wisata</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guide 4 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item" style="background-color: #111; border: 1px solid #333;">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/team-4.jpg" alt="" style="filter: brightness(0.9);">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
+                            <a class="btn btn-square mx-1" href="" style="background-color: #b4a202; color: white;"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href="" style="background-color: #b4a202; color: white;"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href="" style="background-color: #b4a202; color: white;"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0" style="color: #fff;">Firzi Juanda</h5>
+                            <small style="color: #b4a202;">Ahli Sejarah</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5" style="background-color: #000;">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title text-center px-3" style="color: #b4a202;">Testimoni Wisatawan</h6>
+                <h1 class="mb-5" style="color: #fff;">Tanggapan Pengunjung Kami</h1>
+            </div>
+            
+            <div class="testimonial-wrapper">
+                <div class="testimonial-container">
+                    <div class="testimonial-track">
+                        <!-- Testimonial Items akan diisi oleh JavaScript -->
+                    </div>
+                </div>
+                
+                <button class="nav-btn prev-btn">&lt;</button>
+                <button class="nav-btn next-btn">&gt;</button>
+            </div>
+            
+            <div class="dots-container"></div>
+        </div>
+    </div>
+
+    <style>
+        /* Style untuk testimonial wrapper */
+        .testimonial-wrapper {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-container {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .testimonial-track {
+            display: flex;
+            transition: transform 0.5s ease;
+            will-change: transform;
+            padding: 20px 0;
+        }
+        
+        .testimonial-item {
+            width: 300px;
+            padding: 20px;
+            margin: 0 10px;
+            background-color: #111;
+            border: 1px solid #333;
+            border-radius: 8px;
+            text-align: center;
+            flex: 0 0 auto;
+            scroll-snap-align: center;
+        }
+        
+        .testimonial-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ffffff;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-item h5 {
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        
+        .testimonial-item .location {
+            color: #b4a202;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-item .quote {
+            color: #ddd;
+            font-style: italic;
+        }
+        
+        /* Navigation styles */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #b4a20200;
+            color: rgba(255, 255, 255, 0);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .prev-btn {
+            left: 10px;
+        }
+        
+        .next-btn {
+            right: 10px;
+        }
+        
+        .dots-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .dot.active {
+            background-color: #b4a202;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Data testimonial
+            const testimonials = [
+                {
+                    img: "img/testimonial-1.jpg",
+                    
+                    name: "Agus Surya",
+                    location: "Batam, Indonesia",
+                    quote: "Pengalaman luar biasa! Koleksi museum sangat lengkap dan terawat baik."
+                },
+                
+                {
+                    img: "img/testimonial-2.jpg",
+                    name: "Eli rahmawati",
+                    location: "Tanjungpinang, Indonesia",
+                    quote: "Pemandu sangat berpengetahuan, membuat kunjungan menjadi sangat informatif."
+                },
+                {
+                    img: "img/testimonial-3.jpg",
+                    name: "Akbar Firman",
+                    location: "Natuna, Indonesia",
+                    quote: "Arsitektur bangunannya sendiri sudah merupakan karya seni yang menakjubkan."
+                },
+                {
+                    img: "img/testimonial-4.jpg",
+                    name: "Nurul Suci",
+                    location: "Tanjungpinang, Indonesia",
+                    quote: "Saya belajar banyak tentang sejarah Melayu dari kunjungan ini. Sangat berkesan!"
+                }
+            ];
+
+            const track = document.querySelector('.testimonial-track');
+            const container = document.querySelector('.testimonial-container');
+            const dotsContainer = document.querySelector('.dots-container');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            
+            // Clone testimonials untuk infinite loop
+            const clonedTestimonials = [...testimonials, ...testimonials, ...testimonials];
+            
+            // Render testimonials
+            clonedTestimonials.forEach((testimonial, index) => {
+                const item = document.createElement('div');
+                item.className = 'testimonial-item';
+                item.innerHTML = `
+                    <img src="${testimonial.img}" alt="${testimonial.name}">
+                    <h5>${testimonial.name}</h5>
+                    <p class="location">${testimonial.location}</p>
+                    <p class="quote">"${testimonial.quote}"</p>
+                `;
+                track.appendChild(item);
+            });
+            
+            const items = document.querySelectorAll('.testimonial-item');
+            let currentIndex = testimonials.length; // Start in the middle of cloned items
+            let autoScrollInterval;
+            const itemWidth = 320; // Width + margin of each item
+            const scrollDelay = 5000; // 5 detik
+            
+            // Create dots only for original testimonials
+            testimonials.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    goToTestimonial(index + testimonials.length); // Adjust index for cloned items
+                });
+                dotsContainer.appendChild(dot);
+            });
+            
+            const dots = document.querySelectorAll('.dot');
+            
+            // Calculate container width and center position
+            function calculateCenterPosition() {
+                const containerWidth = container.offsetWidth;
+                return (containerWidth - itemWidth) / 2;
+            }
+            
+            // Update position with center alignment
+            function updatePosition() {
+                const centerPosition = calculateCenterPosition();
+                const scrollPosition = (currentIndex * itemWidth) - centerPosition;
+                
+                track.style.transform = `translateX(-${scrollPosition}px)`;
+                
+                // Update active dot
+                const realIndex = currentIndex % testimonials.length;
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === realIndex);
+                });
+                
+                // Reset position jika mencapai ujung (untuk infinite loop)
+                if (currentIndex >= items.length - testimonials.length) {
+                    setTimeout(() => {
+                        currentIndex = testimonials.length;
+                        track.style.transition = 'none';
+                        updatePosition();
+                        setTimeout(() => {
+                            track.style.transition = 'transform 0.5s ease';
+                        }, 50);
+                    }, 500);
+                } else if (currentIndex <= 0) {
+                    setTimeout(() => {
+                        currentIndex = items.length - testimonials.length * 2;
+                        track.style.transition = 'none';
+                        updatePosition();
+                        setTimeout(() => {
+                            track.style.transition = 'transform 0.5s ease';
+                        }, 50);
+                    }, 500);
+                }
+            }
+            
+            // Navigate to specific testimonial
+            function goToTestimonial(index) {
+                currentIndex = index;
+                updatePosition();
+                resetAutoScroll();
+            }
+            
+            // Auto scroll
+            function startAutoScroll() {
+                autoScrollInterval = setInterval(() => {
+                    currentIndex++;
+                    updatePosition();
+                }, scrollDelay);
+            }
+            
+            function resetAutoScroll() {
+                clearInterval(autoScrollInterval);
+                startAutoScroll();
+            }
+            
+            // Event listeners
+            prevBtn.addEventListener('click', () => {
+                currentIndex--;
+                updatePosition();
+                resetAutoScroll();
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                currentIndex++;
+                updatePosition();
+                resetAutoScroll();
+            });
+            
+            // Handle window resize
+            window.addEventListener('resize', updatePosition);
+            
+            // Initialize
+            updatePosition();
+            startAutoScroll();
+            
+            // Touch/swipe support
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            container.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, {passive: true});
+            
+            container.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, {passive: true});
+            
+            function handleSwipe() {
+                if (touchEndX < touchStartX - 50) {
+                    // Swipe left
+                    currentIndex++;
+                } else if (touchEndX > touchStartX + 50) {
+                    // Swipe right
+                    currentIndex--;
+                }
+                updatePosition();
+                resetAutoScroll();
+            }
+        });
+    </script>
+                
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-0 mt-0 wow fadeIn" data-wow-delay="0.1s" style="background-color: #202020 !important; border-top: 1px solid #333;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Company Column -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3" style="color: #b4a202 !important;">Halaman Kami</h4>
+                    <a class="btn btn-link" href="" style="color: #ddd;">Tentang Kami</a>
+                    <a class="btn btn-link" href="" style="color: #ddd;">Pelayanan</a>
+                    <a class="btn btn-link" href="" style="color: #ddd;">Pages</a>
+                    <a class="btn btn-link" href="" style="color: #ddd;">Kontak</a>
+                    <a class="btn btn-link" href="" style="color: #ddd;">Hubungi</a>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3" style="color: #b4a202 !important;">Pusat Informasi</h4>
+                    <p class="mb-2" style="color: #ddd;"><i class="fa fa-phone-alt me-3" style="color: #ffffff;"></i>+08566X3228XX</p>
+                    <p class="mb-2" style="color: #ddd;"><i class="fa fa-envelope me-3" style="color: #ffffff;"></i>museum@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="" style="border-color: #333; color: #b4a202;"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="" style="border-color: #333; color: #b4a202;"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="" style="border-color: #333; color: #b4a202;"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="" style="border-color: #333; color: #b4a202;"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+
+
+                <!-- Contact Column -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3" style="color: #b4a202 !important;">Alamat</h4>
+                    <p class="mb-2" style="color: #ddd;"><i class="fa fa-map-marker-alt me-3" style="color: #ffffff;"></i>Jln Ketapang No.2</p>
+                    <p class="mb-2" style="color: #ddd;"><i class="fa fa-map-marker-alt me-3" style="color: #8b451300;"></i>Kel. Kemboja</p>
+                    <p class="mb-2" style="color: #ddd;"><i class="fa fa-map-marker-alt me-3" style="color: #8b451300;"></i>Kota Tanjung Pinang</p>
+                    <p class="mb-2" style="color: #ddd;"><i class="fa fa-map-marker-alt me-3" style="color: #8b451300;"></i>Kepulauan Riau 35132</p>
+                </div>
+
+                <!-- Company Column -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3" style="color: #b4a202 !important;">Pusat Bantuan</h4>
+                    <a class="btn btn-link" href="" style="color: #ddd;">Call centre</a>
+                    <a class="btn btn-link" href="" style="color: #ddd;">museum@gmail.com</a>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <span style="color: #ddd;">&copy; <a class="border-bottom" href="#" style="color: #b4a202;">Umrah</a>, All Right Reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="" style="color: #ddd;">Home</a>
+                            <a href="" style="color: #ddd;">Cookies</a>
+                            <a href="" style="color: #ddd;">Help</a>
+                            <a href="" style="color: #ddd;">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+     
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+<script>
+// Data koleksi/konten yang bisa dicari
+const searchData = [
+    { title: "Sejarah Museum", desc: "Informasi tentang sejarah Museum Sultan Sulaiman Badrul Alamsyah.", link: "about.html" },
+    { title: "Barang Antik", desc: "Koleksi barang antik dari masa lampau.", link: "koleksi.html" },
+    { title: "Alat Musik Tradisional", desc: "Koleksi alat musik Melayu dan tradisional.", link: "koleksi.html" },
+    { title: "Pakaian Melayu", desc: "Koleksi pakaian adat Melayu.", link: "koleksi.html" },
+    { title: "Pemandu Wisata", desc: "Layanan pemandu wisata museum.", link: "service.html" },
+    { title: "Manajemen Acara", desc: "Layanan manajemen acara di museum.", link: "service.html" },
+    { title: "Kontak Museum", desc: "Hubungi kami untuk informasi lebih lanjut.", link: "contact.html" },
+    { title: "Tanggapan Pengunjung", desc: "Testimoni dan tanggapan dari pengunjung museum.", link: "tanggapan.html" },
+    { title: "Akbar Rahmat Arifin", desc: "Pemandu wisata di Museum Sultan Sulaiman Badrul Alamsyah.", link: "team.html" },
+    { title: "Ragil Novant", desc: "Ahli sejarah di Museum Sultan Sulaiman Badrul Alamsyah.", link: "team.html" },
+    { title: "Fahmi Zikri", desc: "Pemandu wisata di Museum Sultan Sulaiman Badrul Alamsyah.", link: "team.html" },
+    { title: "Firzi Juanda", desc: "Ahli sejarah di Museum Sultan Sulaiman Badrul Alamsyah.", link: "team.html" },
+    { title: "Team Museum", desc: "Daftar pemandu dan ahli sejarah Museum Sultan Sulaiman Badrul Alamsyah.", link: "team.html" }
+];
+
+// Fungsi pencarian
+function searchMuseum(keyword) {
+    keyword = keyword.trim().toLowerCase();
+    if (!keyword) return [];
+    return searchData.filter(item =>
+        item.title.toLowerCase().includes(keyword) ||
+        item.desc.toLowerCase().includes(keyword)
+    );
+}
+
+// --- Dropdown hasil pencarian seperti index.html/about.html ---
+(function() {
+    let dropdown = document.createElement('div');
+    dropdown.id = 'searchDropdown';
+    dropdown.style.position = 'absolute';
+    dropdown.style.top = '100%';
+    dropdown.style.left = '0';
+    dropdown.style.right = '0';
+    dropdown.style.background = 'rgba(34,34,34,0.98)';
+    dropdown.style.borderRadius = '0 0 16px 16px';
+    dropdown.style.zIndex = '9999';
+    dropdown.style.boxShadow = '0 4px 16px rgba(0,0,0,0.15)';
+    dropdown.style.display = 'none';
+    dropdown.style.maxHeight = '300px';
+    dropdown.style.overflowY = 'auto';
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var searchInput = document.getElementById('searchInput');
+        var searchButton = document.getElementById('searchButton');
+        if (!searchInput) return;
+
+        var parent = searchInput.parentElement;
+        parent.style.position = 'relative';
+        parent.appendChild(dropdown);
+
+        searchInput.addEventListener('input', function() {
+            const keyword = searchInput.value;
+            const results = searchMuseum(keyword);
+            dropdown.innerHTML = '';
+            if (keyword && results.length > 0) {
+                results.forEach(item => {
+                    let div = document.createElement('div');
+                    div.style.padding = '12px 18px';
+                    div.style.cursor = 'pointer';
+                    div.style.color = '#fff';
+                    div.style.borderBottom = '1px solid #333';
+                    div.innerHTML = `<strong>${item.title}</strong><br><small style="color:#ceb901">${item.desc}</small>`;
+                    div.addEventListener('mousedown', function(e) {
+                        e.preventDefault();
+                        window.location.href = item.link;
+                    });
+                    dropdown.appendChild(div);
+                });
+                dropdown.style.display = 'block';
+            } else if (keyword) {
+                let div = document.createElement('div');
+                div.style.padding = '12px 18px';
+                div.style.color = '#fff';
+                div.innerHTML = 'Tidak ditemukan.';
+                dropdown.appendChild(div);
+                dropdown.style.display = 'block';
+            } else {
+                dropdown.style.display = 'none';
+            }
+        });
+
+        searchInput.addEventListener('blur', function() {
+            setTimeout(() => dropdown.style.display = 'none', 150);
+        });
+
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                const results = searchMuseum(searchInput.value);
+                if (results.length > 0) {
+                    window.location.href = results[0].link;
+                }
+            }
+        });
+
+        if (searchButton) {
+            searchButton.addEventListener('click', function() {
+                const results = searchMuseum(searchInput.value);
+                if (results.length > 0) {
+                    window.location.href = results[0].link;
+                }
+            });
+        }
+    });
+})();
+</script>
+</body>
+
+</html>
